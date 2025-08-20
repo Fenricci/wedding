@@ -1,0 +1,86 @@
+.calendar-container {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #efeeee;
+}
+
+.calendar-title {
+  font-size: 40px;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.calendar-month {
+  font-size: 26px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.calendar {
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+.calendar th,
+.calendar td {
+  width: 80px;   /* шире */
+  height: 80px;  /* выше */
+  text-align: center;
+  vertical-align: middle;
+  position: relative; /* нужно для absolute элементов внутри */
+}
+
+.calendar th {
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.red {
+  color: #d43c3c;
+}
+
+.highlight {
+  position: relative;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Обёртка для кольца + числа */
+.highlight .ring-wrapper {
+  position: relative;
+  width: 64px;   /* размер кольца */
+  height: 64px;
+  margin: 0 auto;
+}
+
+.highlight img {
+  position: absolute;
+  inset: 0;
+  width: 64px;
+  height: 64px;
+  translate: 16px;
+  transform: rotate(45deg); /* чуть повернули */
+}
+
+.highlight span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calendar-date {
+  font-size: 26px;
+  margin-top: 25px;
+  letter-spacing: 2px;
+}
