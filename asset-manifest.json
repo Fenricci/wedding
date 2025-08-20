@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.e4692013.css",
-    "main.js": "/wedding/static/js/main.0c8d38d8.js",
+    "main.css": "/wedding/static/css/main.ce260786.css",
+    "main.js": "/wedding/static/js/main.0fa3a136.js",
     "static/media/GreatVibes-Regular.ttf": "/wedding/static/media/GreatVibes-Regular.ce1c9a51afff13bd62e1.ttf",
     "index.html": "/wedding/index.html",
-    "main.e4692013.css.map": "/wedding/static/css/main.e4692013.css.map",
-    "main.0c8d38d8.js.map": "/wedding/static/js/main.0c8d38d8.js.map"
+    "main.ce260786.css.map": "/wedding/static/css/main.ce260786.css.map",
+    "main.0fa3a136.js.map": "/wedding/static/js/main.0fa3a136.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4692013.css",
-    "static/js/main.0c8d38d8.js"
+    "static/css/main.ce260786.css",
+    "static/js/main.0fa3a136.js"
   ]
 }
