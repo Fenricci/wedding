@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         wedding: ['MyWeddingFont', 'serif'],
+        calendar: ['MyCalendarFont', 'sans-serif'],
+        title: ['CalendarTitleFont', 'serif']
       },
     },
   },

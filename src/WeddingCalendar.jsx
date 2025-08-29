@@ -4,7 +4,7 @@ import "./WeddingCalendar.css";
 const WeddingCalendar = () => {
   return (
     <div className="calendar-container">
-      <h2 className="font-wedding text-5xl mb-6">СВАДЬБА СОСТОИТСЯ</h2>
+      <h2 className="calendar-title-with-lines font-title text-6xl mb-20">Свадьба состоится</h2>
 
       <div className="calendar-month">СЕНТЯБРЬ</div>
 
@@ -34,18 +34,16 @@ const WeddingCalendar = () => {
             <td>22</td>
             <td>23</td>
             <td>24</td>
-            <td className="highlight relative w-32 h-32">
-              {/* Кольцо */}
-              <img
-                  src="./engagement-ring-diamond-svgrepo-com.svg"
-                  alt="Кольцо"
-                  className="absolute w-32 h-32 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45"
-              />
-
-              {/* Число */}
-              <span className="absolute inset-0 flex items-center justify-center text-lg font-bold">
-                25
-              </span>
+            <td className="highlight">
+              <div className="ring-wrapper">
+                {/* Кольцо */}
+                <img
+                    src="./engagement-ring-diamond-svgrepo-com.svg"
+                    alt="Кольцо"
+                />
+                {/* Число */}
+                <span>25</span>
+              </div>
             </td>
             <td>26</td>
             <td className="red">27</td>
@@ -58,7 +56,7 @@ const WeddingCalendar = () => {
         </tbody>
       </table>
 
-      <div className="calendar-date">25/09/2025</div>
+      <div className="calendar-date-with-lines">25/09/2025</div>
     </div>
   );
 };

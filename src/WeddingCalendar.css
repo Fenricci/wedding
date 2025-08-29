@@ -1,44 +1,88 @@
-.calendar-container {
-  text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-  color: #333;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: #efeeee;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #e8e6e6 !important; /* общий фон */
+  overflow-x: hidden; /* отключает горизонтальный скролл */
 }
 
-.calendar-title {
-  font-size: 40px;
-  margin-bottom: 25px;
+.calendar-container {
+  text-align: center;
+  font-family: 'Raleway', serif;
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.calendar td,
+.calendar th,
+.calendar-date,
+.ring-wrapper span {
+  font-family: 'Roboto Mono', monospace; /* шрифт только для цифр */
+}
+
+.calendar-title-with-lines {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
   font-weight: 300;
   letter-spacing: 2px;
+  margin-bottom: 40px; /* отступ вниз, чтобы "СЕНТЯБРЬ" было ниже */
+  padding: 0 20px; /* место для линий */
+}
+
+.calendar-title-with-lines {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 40px; /* отступ вниз, чтобы "СЕНТЯБРЬ" было ниже */
+  padding: 0 20px; /* место для линий */
+}
+
+.calendar-title-with-lines::before,
+.calendar-title-with-lines::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;   /* длина линии */
+  height: 1px;   /* толщина */
+  background: #333;
+}
+
+.calendar-title-with-lines::before {
+  left: -70px; /* позиция линии слева */
+}
+
+.calendar-title-with-lines::after {
+  right: -70px; /* позиция линии справа */
 }
 
 .calendar-month {
   font-size: 26px;
   margin-bottom: 15px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .calendar {
   margin: 0 auto;
   border-collapse: collapse;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .calendar th,
 .calendar td {
-  width: 80px;   /* шире */
-  height: 80px;  /* выше */
+  width: 60px;   /* ширина ячейки */
+  height: 60px;  /* высота ячейки */
   text-align: center;
   vertical-align: middle;
-  position: relative; /* нужно для absolute элементов внутри */
+  position: relative;
 }
 
 .calendar th {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 5px;
 }
 
@@ -47,40 +91,59 @@
 }
 
 .highlight {
-  position: relative;
-  font-weight: bold;
-  color: #000;
+  text-align: center;
 }
 
-/* Обёртка для кольца + числа */
-.highlight .ring-wrapper {
+/* Контейнер для кольца и числа */
+.ring-wrapper {
   position: relative;
-  width: 64px;   /* размер кольца */
-  height: 64px;
-  margin: 0 auto;
+  width: 54px;   /* размер кольца */
+  height: 54px;
+  margin: 0 auto; /* по центру в ячейке */
 }
 
-.highlight img {
+.ring-wrapper img {
   position: absolute;
   inset: 0;
-  width: 64px;
-  height: 64px;
-  translate: 16px;
-  transform: rotate(45deg); /* чуть повернули */
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  transform: translate(6px, -10px) rotate(45deg);
 }
 
-.highlight span {
+.ring-wrapper span {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-.calendar-date {
+.calendar-date-with-lines {
+  position: relative;
+  display: inline-block;
   font-size: 26px;
   margin-top: 25px;
   letter-spacing: 2px;
+  padding: 0 20px;
+}
+
+.calendar-date-with-lines::before,
+.calendar-date-with-lines::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 1px;
+  background: #333;
+}
+
+.calendar-date-with-lines::before {
+  left: -70px;
+}
+
+.calendar-date-with-lines::after {
+  right: -70px;
 }

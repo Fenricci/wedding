@@ -5,11 +5,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyCalendarFont';
+  src: url('./assets/Title.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CalendarTitleFont';
+  src: url('./assets/Floriselscript.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Если нужны свои стили, добавляй ниже */
 body {
   @apply bg-white text-gray-900;
 }
